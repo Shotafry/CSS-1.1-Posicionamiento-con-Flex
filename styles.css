@@ -1,0 +1,249 @@
+:root {
+  --bg-color: #002b36;
+  --primary-color: #26a69a;
+  --secondary-color: #00796b;
+  --accent-color: #51c0c4;
+  --text-color: #eee;
+  --highlight-color: #00d7a7;
+  --footer-bg-color: #073642;
+  --footer-text-color: #839496;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--secondary-color);
+}
+
+.header .logo {
+  font-size: 1.5em;
+}
+
+.header .nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header .nav ul li {
+  margin-left: 20px;
+}
+
+.header .nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+.spanone {
+  color: var(--highlight-color);
+}
+/* area del hero*/
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, var(--bg-color), var(--primary-color));
+}
+
+.hero {
+  flex-grow: 1;
+  flex-shrink: 2;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+}
+
+.hero p {
+  font-size: 1.2em;
+}
+
+.hero .cta-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* area para los servicios ofrecidos*/
+.servicios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px 20px;
+  background: var(--bg-color);
+}
+
+.servicios .servicio {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid var(--highlight-color);
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+}
+
+.servicios .servicio h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.servicios .servicio p {
+  font-size: 1em;
+}
+
+/* las reseñas */
+.reseñas {
+  text-align: center;
+  padding: 50px 20px;
+  background: var(--bg-color);
+}
+
+.reseñas h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.reseñas .reseña {
+  margin: 20px 0;
+  border: 1px solid var(--highlight-color);
+  padding: 20px;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+}
+
+.reseñas .reseña p {
+  font-size: 1em;
+}
+
+/* botones y demas */
+.cta {
+  text-align: center;
+  padding: 50px 20px;
+  background: var(--primary-color);
+  color: var(--text-color);
+}
+
+.cta h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.cta .cta-button {
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
+}
+
+.footer nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer nav ul li {
+  margin-left: 20px;
+}
+
+.footer nav ul li a {
+  color: var(--footer-text-color);
+  text-decoration: none;
+}
+
+.footer .social-links {
+  margin-top: 10px;
+}
+
+.footer .social-links a {
+  margin: 0 10px;
+  color: var(--footer-text-color);
+  text-decoration: none;
+}
+/* para que me funcione en otros dispositivos */
+@media (max-width: 768px) {
+  .header .nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero {
+    padding: 50px 20px;
+  }
+
+  .reseñas {
+    flex-direction: column;
+  }
+
+  .cta {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .hero .cta-button {
+    padding: 8px 16px;
+  }
+
+  .servicios .servicio {
+    padding: 10px;
+  }
+
+  .reseñas .reseña {
+    padding: 10px;
+  }
+
+  .cta h2 {
+    font-size: 1.5em;
+  }
+
+  .cta .cta-button {
+    padding: 8px 16px;
+  }
+
+  .footer nav ul {
+    flex-direction: column;
+  }
+
+  .footer nav ul li {
+    margin: 10px 0;
+  }
+}
